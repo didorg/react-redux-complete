@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Babel to transpile JSX in something that the browser can understand -->
+    <!-- https://babeljs.io/setup#installation"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- https://reactjs.org/docs/cdn-links.html></script> -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- We need to add [type="text/babel"] -->
+    <script type="text/babel">
+        class App extends React.Component {
+            state = {
+                name: 'Dido',
+                age: 36
+            }
+            /* We use arrow functions inside ours components when we want to use javascript keyword[this] */
+            handleClick = (e) => {
+                console.log(this.state);
+            }
+            changeState = (e) => {
+                this.setState({
+                    name: 'Lisi',
+                    age: 33
+                });
+            }
+            handleClickTarget(e){
+                console.log(e.target);
+            }
+            render(){
+                return (
+                    <div className="app-content">
+                        <h1> Hi!</h1>
+                        <p> My name is {this.state.name} and I am {this.state.age} years old</p>
+                        {/* function without parentheses does not load the function until you call it 
+                            function() with parentheses does load the function when the page load */}
+                        <button onClick={this.handleClick}>Click Me (See the console)</button>
+                        <button onClick={this.changeState}>Click Me to change the state</button>
+                        <button onClick={this.handleClickTarget}>Click Me (to see the target)</button>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<App/>, document.getElementById('app'))
+    </script>
+</body>
+
+</html>
