@@ -1,3 +1,3 @@
 # React Redux Complete Example 
 
-##### See each branch for different levels
+##### Each branch has different levels
