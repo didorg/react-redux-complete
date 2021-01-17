@@ -1,1 +1,1 @@
-# react-redux-complete
+# React Redux Complete Example 
