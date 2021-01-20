@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-class AddPerson extends Component{
+class AddAnimal extends Component {
     state = {
         name: null,
         age: null,
@@ -13,10 +13,10 @@ class AddPerson extends Component{
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        this.props.addAnimal(this.state);
     }
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="name">Name:</label>
@@ -32,4 +32,4 @@ class AddPerson extends Component{
     }
 }
 
-export default AddPerson
+export default AddAnimal
