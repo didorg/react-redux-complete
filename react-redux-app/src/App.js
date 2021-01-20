@@ -20,12 +20,21 @@ class App extends Component {
     });
   }
 
+  deletePet = (id) => {
+    let pets = this.state.pets.filter(pet => {
+      return pet.id !== id 
+    });
+    this.setState({
+      pets: pets
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <h1> Welcome to React App!</h1>
+        <h1> React App!</h1>
         <AddPet addPet={this.addPet} />
-        <Pet pets={this.state.pets} />
+        <Pet pets={this.state.pets} deletePet={this.deletePet}/>
       </div>
     )
   }
