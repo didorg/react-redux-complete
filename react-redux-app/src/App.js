@@ -22,7 +22,7 @@ class App extends Component {
 
   deletePet = (id) => {
     let pets = this.state.pets.filter(pet => {
-      return pet.id !== id 
+      return pet.id !== id
     });
     this.setState({
       pets: pets
@@ -34,7 +34,7 @@ class App extends Component {
       <div className="App">
         <h1> React App!</h1>
         <AddPet addPet={this.addPet} />
-        <Pet pets={this.state.pets} deletePet={this.deletePet}/>
+        <Pet pets={this.state.pets} deletePet={this.deletePet} />
       </div>
     )
   }
