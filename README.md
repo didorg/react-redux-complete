@@ -1,3 +1,3 @@
-# React Redux Complete Example 
+# React Example 
 
-##### Each branch has different levels
+##### Add & Delete Pets. (basic)
