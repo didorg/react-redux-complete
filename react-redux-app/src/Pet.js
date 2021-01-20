@@ -8,7 +8,7 @@ const Pets = ({ pets, deletePet }) => {
                     <div>Pet: {pet.name}</div>
                     <div>Age: {pet.age}</div>
                     <div>Eyes: {pet.eyes}</div>
-                    <button onClick={() => {deletePet(pet.id)}}>Delete Pet </button>
+                    <button onClick={() => { deletePet(pet.id) }}>Delete Pet </button>
                 </div>
             )
 
