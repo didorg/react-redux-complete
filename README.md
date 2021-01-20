@@ -1,3 +1,3 @@
-# React Redux Complete Example 
+# React Example 
 
-##### Each branch has different levels
+##### Todo App. (Basic)
