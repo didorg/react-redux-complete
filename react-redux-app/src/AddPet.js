@@ -13,13 +13,13 @@ class AddAnimal extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addAnimal(this.state);
+        this.props.addPet(this.state);
     }
     render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="name">Name:</label>
+                    <label htmlFor="name">Pet:</label>
                     <input type="text" id="name" onChange={this.handleChange} />
                     <label htmlFor="name">Age:</label>
                     <input type="text" id="age" onChange={this.handleChange} />
